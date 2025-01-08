@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <script>
+            // Function to greet a user and display their eligibility to vote
+            function greetUser(name) {
+                name = prompt("What's your name?")
+                age = parseFloat(prompt("How old are you?"))
+
+                let message;
+
+                if (age >= 18) {
+                    message = ", you are eligible to vote."
+                }
+                else {
+                    message = ", you are not eligible to vote."
+                }
+                const container = document.getElementById("container");
+                container.innerHTML = `<p> Welcome ${name} ${message}`;
+            }
+            greetUser()
+        </script>
+    </div>
+
+    <div id="10numbers">
+        <script>
+            // Loop for displaying numbers from 1 to 10
+            for (let i = 1; i <= 10; i++) {
+                const numbers = document.getElementById("10numbers");
+                const numList = document.createElement('ol');
+
+                numList.textContent = i;
+                numbers.appendChild(numList);
+            }
+        </script>
+    </div>
+
+    <h1> Javascript Assignment</h1>
+    <p> Learning Javascript is Fun! </p>
+    <div id="dynamic-content">
+        <script>
+            // Generating and modifying content dynamically using Javascript
+            const dynamic = document.querySelector("h1");
+            dynamic.textContent = "Javascript In Action!"
+
+            const dynamic_para = document.getElementById("dynamic-content");
+            dynamic_para.innerHTML = `<p> This content was added dynamically using JavaScript.`;
+        </script>
+    </div>
+</body>
+
+</html>
